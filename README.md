@@ -21,7 +21,7 @@ Below is a summary of the parameters used by MEME Suite with the command line:
 
 MEME Suite output contains DNA sequence LOGOS for each discovered motif significantly enriched in the input sequences (**Fig. 3**). MEME identified 4 motifs that were significantly enriched in our query of sequences. Most of them were related with transcription termination such as polyadenylation sites, however, motif number 2 seemed promising and was kept for downstream analyses.
 
-![Figure 3](https://user-images.githubusercontent.com/69206510/167194980-8937c87a-20c0-4982-b6a5-54dfc5aec445.png)
+![Figure 3](https://user-images.githubusercontent.com/69206510/167194980-8937c87a-20c0-4982-b6a5-54dfc5aec445.png | width=100)
 
 **Figure 3. MEME Suite output from BioMart query containing 3’UTR sequences.** The discovered motifs are ranked based on their statistical significance (E-value). Each motif has several sites or occurrences in the query. In the context of the motif number 2, since here we performed the analysis in zoops mode, this means that 32 transcripts have this enriched motif in their 3’UTR. Each computed motif has a width of 9 nucleotides. The “More” column investigates the details of the motif, such as sequence position. The “Submit/Download” column facilitates using the MEME output as input for motif comparison tools including Tomtom.
 
