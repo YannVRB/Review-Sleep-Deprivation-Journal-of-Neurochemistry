@@ -9,8 +9,7 @@ Previously, we identified 149 transcripts differentially regulated by sleep depr
 ## 3’UTR retrieval from transcripts IDs with BioMart
 BioMart enables advanced querying of biological data sources through a single web interface. Full sets of ENSEMBL 3’UTR sequences were obtained using the BioMart utility (Smedley et al., 2009) (www.ensembl.org/biomart/martview) with the following filters and parameters (**Fig. 2**). Briefly, transcript names in the format “mt-Tf-201” were pasted into the filter. The attribute outputs required were the transcript stable identifications and their respective 3’UTR sequence. Results were exported in FASTA format (with .txt extension) as DNA sequence because BioMart only provides genomic sequences. This is not an issue here because we are specifying specific transcript isoforms therefore only the 3’UTR from the genomic annotation of the specific transcript is provided. In addition, tools in downstream analysis allow for alphabet expansion to compare RNA motifs to DNA motifs. Finally, as some transcripts may not have a published or characterized 3’UTR, one must remove IDs and sequences that display “sequence unavailable” in the FASTA file, otherwise the next step will fail.
 
-
-
+![Figure 2](https://user-images.githubusercontent.com/69206510/167194825-a9498c07-b155-45f4-b7d8-5582c06c0b6b.png)
 **Figure 2. Filters and parameters used for 3’UTR sequence retrieval from a list of transcript names.**
 
 ## Unbiased motif discovery with MEME Suite
