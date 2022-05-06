@@ -10,6 +10,7 @@ Previously, we identified 149 transcripts differentially regulated by sleep depr
 BioMart enables advanced querying of biological data sources through a single web interface. Full sets of ENSEMBL 3’UTR sequences were obtained using the BioMart utility (Smedley et al., 2009) (www.ensembl.org/biomart/martview) with the following filters and parameters (**Fig. 2**). Briefly, transcript names in the format “mt-Tf-201” were pasted into the filter. The attribute outputs required were the transcript stable identifications and their respective 3’UTR sequence. Results were exported in FASTA format (with .txt extension) as DNA sequence because BioMart only provides genomic sequences. This is not an issue here because we are specifying specific transcript isoforms therefore only the 3’UTR from the genomic annotation of the specific transcript is provided. In addition, tools in downstream analysis allow for alphabet expansion to compare RNA motifs to DNA motifs. Finally, as some transcripts may not have a published or characterized 3’UTR, one must remove IDs and sequences that display “sequence unavailable” in the FASTA file, otherwise the next step will fail.
 
 ![Figure 2](https://user-images.githubusercontent.com/69206510/167194825-a9498c07-b155-45f4-b7d8-5582c06c0b6b.png)
+
 **Figure 2. Filters and parameters used for 3’UTR sequence retrieval from a list of transcript names.**
 
 ## Unbiased motif discovery with MEME Suite
@@ -20,6 +21,7 @@ Below is a summary of the parameters used by MEME Suite with the command line:
 
 MEME Suite output contains DNA sequence LOGOS for each discovered motif significantly enriched in the input sequences (**Fig. 3**). MEME identified 4 motifs that were significantly enriched in our query of sequences. Most of them were related with transcription termination such as polyadenylation sites, however, motif number 2 seemed promising and was kept for downstream analyses.
 
+![Figure 3](https://user-images.githubusercontent.com/69206510/167194980-8937c87a-20c0-4982-b6a5-54dfc5aec445.png)
 
 **Figure 3. MEME Suite output from BioMart query containing 3’UTR sequences.** The discovered motifs are ranked based on their statistical significance (E-value). Each motif has several sites or occurrences in the query. In the context of the motif number 2, since here we performed the analysis in zoops mode, this means that 32 transcripts have this enriched motif in their 3’UTR. Each computed motif has a width of 9 nucleotides. The “More” column investigates the details of the motif, such as sequence position. The “Submit/Download” column facilitates using the MEME output as input for motif comparison tools including Tomtom.
 
@@ -31,16 +33,18 @@ Below is a summary of the parameters used by Tomtom with the command line:
 
 Tomtom identified 49 matches in this database that have a significant match the query motif number 2 from MEME Suite. The two most significant alignment for enriched motif number 2 included miRNA binding site for mmu-miR-7045-3p and mmu-miR-6971-5p (**Fig. 4**). Very little is known about the role of those two miRNAs and their regulatory mechanism, even less in the context of sleep deprivation. Only one study previously found down regulation of mmu-miR-7045-3p after local treatment for rheumatoid arthritis in bone marrow-derived dendritic cells (Wang et al., 2020). Nevertheless, it is possible to support the targets of those miRNA in silico even though experimental validation would be ideal. To this end, one can go back on the MEME Suite output and retrieve transcripts identification as well as the location of the enriched motif in each 3’UTR (**Fig. 5**). This allows us to identify the transcripts that contained the enriched motif number 2, and predicted to be targeted by the two miRNAs.
 
-
+![Figure 4](https://user-images.githubusercontent.com/69206510/167195056-b8309447-5cfb-4886-8e66-4643f6557e34.png)
 
 **Figure 4. Comparison and alignment of enriched motif number 2 from MEME Suite with miRNA database (miRbase).** The figure shows the Tomtom output from searching a single 3’UTR RNA motif against a collection of mouse miRNAs binding site motifs collected in miRbase database. Each miRNA from the database is being aligned to the enriched motif queried from MEME Suite. For each optimal alignment, a p-value is associated with the significant overlap between a motif and a miRNA.
 
+![Figure 5](https://user-images.githubusercontent.com/69206510/167195106-1fce686f-e985-4aea-9dfa-ade6d41ac2a0.png)
 
 **Figure 5. Details of enriched motif number 2 from MEME Suite and site locations in 3’UTR of the sequences queried.** Looking back to the MEME Suite output is necessary to observe which transcript is predicted to be targeted by a miRNA through the enriched motif. In addition, the exact site and sequence of the motif is displayed for each query.
 
 ## Validation in silico of transcripts targeted by mmu-miR-7045-3p and mmu-miR-6971-5p
 The final in silico step to support the evidence that a subset of transcripts is down-regulated because of translational silencing by a miRNA is to assess if the transcripts are predicted to be recognized by a given miRNA. TargetScan predicts biological targets of miRNAs by searching for the presence of conserved 8mer, 7mer, and 6mer sites that match the seed region of each miRNA (Agarwal et al., 2015). Out of the 32 transcripts containing the enriched motif number 2, twenty of these were significantly predicted to be recognized by at least one of the two miRNAs (mmu-miR-7045-3p and/or mmu-miR-6971-5p) (**Fig. 6**).
 
+![Figure 6](https://user-images.githubusercontent.com/69206510/167195136-c1481aae-2a49-4581-90ba-aae940f49e4c.png)
 
 **Figure 6. Predicted binding sites of mmu-miR-7045-3p and mmu-miR-6971-5p in the 3’UTR of down-regulated transcripts after sleep deprivation.** Venn diagrams represent the overlap of transcripts and their 3’UTR targeted by the two miRNAs. The horizontal black lines represent the 3’UTR and their respective length starting at 1. The red dots are the predicted binding sites for the miRNAs. 
 
