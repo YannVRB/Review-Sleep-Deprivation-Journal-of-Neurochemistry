@@ -2,7 +2,7 @@
 
 Previously, we identified 149 transcripts differentially regulated by sleep deprivation in the translatome but not in the whole transcriptome (Lyons et al., 2020). Out of those 149 transcripts, 94 were significantly upregulated and 55 were significantly downregulated (adjusted p-value <0.05). We further investigated the mechanism of post-transcriptional regulation by  identifying common regulatory sequences in the RNA  using extracted sequence features to search for conserved binding sites for micro-RNA (miRNA) in the 3’ UTR. The following pipeline was applied to our list of transcripts down-regulated after sleep deprivation in the translatome (**Fig. 1**). This pipeline can be applied to any sequence feature from a list of genes or transcripts however results highly depend on the databases used for comparison.
 
-![alt text](Figure 1.png)
+![Figure 1](https://user-images.githubusercontent.com/69206510/167194485-1e3520a7-e527-4b65-9a13-f70539b051a1.png)
 
 **Figure 1. Overview of the pipeline analysis for the investigation in silico of miRNAs binding sites from a list of differentially regulated transcripts.**
 
