@@ -50,8 +50,12 @@ The final in silico step to support the evidence that a subset of transcripts is
 
 ## References
 Agarwal, V., Bell, G.W., Nam, J.-W., and Bartel, D.P. (2015). Predicting effective microRNA target sites in mammalian mRNAs. ELife 4, e05005. https://doi.org/10.7554/eLife.05005.
+
 Gupta, S., Stamatoyannopoulos, J.A., Bailey, T.L., and Noble, W.S. (2007). Quantifying similarity between motifs. Genome Biol 8, R24. https://doi.org/10.1186/gb-2007-8-2-r24.
+
 Lyons, L.C., Chatterjee, S., Vanrobaeys, Y., Gaine, M.E., and Abel, T. (2020). Translational changes induced by acute sleep deprivation uncovered by TRAP-Seq. Molecular Brain 13. https://doi.org/10.1186/s13041-020-00702-5.
+
 Smedley, D., Haider, S., Ballester, B., Holland, R., London, D., Thorisson, G., and Kasprzyk, A. (2009). BioMart – biological queries made easy. BMC Genomics 10, 22. https://doi.org/10.1186/1471-2164-10-22.
+
 Wang, Y., Liu, H., Cao, M., Wang, X., Cong, S., Sun, J., Jia, B., Ta-bu-shi, N., Bian, Y., and Luo, L. (2020). Mechanism of miRNA-based Aconitum leucostomum Worosch. Monomer inhibition of bone marrow-derived dendritic cell maturation. International Immunopharmacology 88, 106791. https://doi.org/10.1016/j.intimp.2020.106791.
 
